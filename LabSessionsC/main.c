@@ -20,6 +20,15 @@ int main(int argc, const char * argv[]) {
     rev[i] = '\0';
     printf("The reverse of %s is %s\n", str, rev);
    
+    char compare[20];
+    printf("Enter another word : ");
+    scanf("%s", compare);
+    
+    if (strcmp(compare, str) == 0){
+        printf("The two words match!\n");
+    } else {
+        printf("The two words do not match...\n");
+    }
     
     return 0;
 }
