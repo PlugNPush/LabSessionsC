@@ -7,9 +7,19 @@
 //
 
 #include <stdio.h>
+#include <string.h>
 
 int main(int argc, const char * argv[]) {
-    // insert code here...
-    printf("Hello, World!\n");
+    char str[20], rev[20];
+    int i;
+    printf("Enter a word : ");
+    scanf("%s", str);
+    for(i=0; i < strlen(str); i++){
+        rev[i] = str[strlen(str)-1-i];
+    }
+    rev[i] = '\0';
+    printf("The reverse of %s is %s\n", str, rev);
+   
+    
     return 0;
 }
