@@ -33,6 +33,20 @@ void TD1(){
 }
 
 void C1(){
+        // Two methods : 1 - Progressively swap tbe neighbor values until the array is sorted. (you can use a bool set to false by default and changed to true everytime a swap is made in order to know when you don't need to continue => when the bool is set to false after the loop)
+        // 2 - Progressively swap the minimum value between i and the rest of the array until you reach the end.
+    
+        // The type String does not exist : it is an array of characters (char something[100] = "Hello";), and it has a dedicated '\0' character at the end so when you create the array, make sure that you have always at least one extra space for that character placed automatically by the compiler.
+    char str[20];
+    int i = 0;
+    printf("Enter a word : ");
+    scanf("%s", str);
+    while (str[i] != '\0'){
+        i++;
+        printf("++\n");
+    }
+    printf("Number of characters : %d\n", i);
+    
     return;
 }
 
