@@ -32,6 +32,33 @@ void TD1(){
     return;
 }
 
+void TD2(){
+    // Write a function to take 2 sorted arrays and create a third sorted array out of the fusion of the two first.
+    
+    return;
+    
+}
+
+void C2(){
+    int array[20][20];
+    int i = 0;
+    int nb = 0;
+    int rw = 0;
+    
+    printf("How many numbers per row?");
+    scanf("%d", &nb);
+    printf("How many rows?");
+    scanf("%d", &rw);
+    printf("Enter in a row your selection.");
+    int se = 0;
+    
+    while (i > nb){
+        scanf("%d", &se);
+        array[0][i] = se;
+    }
+    return;
+}
+
 void C1(){
         // Two methods : 1 - Progressively swap tbe neighbor values until the array is sorted. (you can use a bool set to false by default and changed to true everytime a swap is made in order to know when you don't need to continue => when the bool is set to false after the loop)
         // 2 - Progressively swap the minimum value between i and the rest of the array until you reach the end.
@@ -64,6 +91,9 @@ int main(int argc, const char * argv[]) {
             break;
         case 2:
             C1();
+            break;
+        case 3:
+            C2();
             break;
             
         default:
