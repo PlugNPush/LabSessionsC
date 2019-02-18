@@ -36,7 +36,16 @@ remove element on the top of the list
 remove element on the bottom of the list
 remove one element in the list
 
+-> linked list !!!
 
+
+Shot on iPhone on 18.02.2019
+Redo the exercices using the model
+
+
+
+
+All this is false because it deals with ordinary lists instead of linked lists !
 
 function: addOnTop(Array[]: Array of integers, element, length: integers)
 copied parameter: length, element, Array
@@ -69,6 +78,6 @@ changed parameter: Array, length
 local variable: /
 
 begin
-Array[length+1] <- element
-length <- length + 1
+Array[length] <- null
+length <- length - 1
 end
