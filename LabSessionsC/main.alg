@@ -31,5 +31,44 @@ end
 //
 
 Add element on the top of the list
-add an element 
+add an element on the bottom of the list
+remove element on the top of the list
+remove element on the bottom of the list
 remove one element in the list
+
+
+
+function: addOnTop(Array[]: Array of integers, element, length: integers)
+copied parameter: length, element, Array
+changed parameter: Array, length
+local variable: /
+
+begin
+Array[length+1] <- element
+length <- length + 1
+end
+
+
+function: addOnBottom(Array[]: Array of integers, element, length: integers)
+copied parameter: length, element, Array
+changed parameter: Array, length
+local variable: newArray[]
+
+begin
+newArray[0] <- element
+for i <- 1 to i = length do
+    newArray[i] <- Array[i-1]
+end for
+length <- length + 1
+end
+
+
+function: removeOnTop(Array[]: Array of integers, length: integers)
+copied parameter: length, Array
+changed parameter: Array, length
+local variable: /
+
+begin
+Array[length+1] <- element
+length <- length + 1
+end

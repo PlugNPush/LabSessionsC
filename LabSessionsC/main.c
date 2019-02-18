@@ -50,6 +50,16 @@ void TD3(){
     return;
 }
 
+void TD4(){
+    
+    return;
+}
+
+void C5(){
+    
+    return;
+}
+
 void C4(){
     // realloc() and malloc()
     //int array[100][100];
