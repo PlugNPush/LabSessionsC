@@ -7,6 +7,7 @@
 //
 
 #include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
 
 void TD1(){
@@ -37,6 +38,80 @@ void TD2(){
     
     return;
     
+}
+
+void TD3(){
+    // Linked lists with Arrays
+    
+    // Declare an empty array
+    
+    
+    
+    return;
+}
+
+void C4(){
+    // realloc() and malloc()
+    //int array[100][100];
+    
+    int Lig, Col,i,j; int **T;
+    // Declaration of the lines, columns, counter for the lines, -- for the columns, and the dynamic pointer of the Array of integers
+    
+    do{
+        printf("Introduce number of lines\n");
+        scanf("%d",&Lig);
+    } while(Lig<=0);
+    // We want a positive number of lines
+    
+    do{
+        printf("Introduce number of columns\n");
+        scanf("%d",&Col);
+    } while(Col<=0);
+    // We want a positive number of columns
+    
+    T=(int **)malloc(Lig*sizeof(int*));
+    // T becomes an Array that is as big as the number of lines * the size of an integer (as the type is integer)
+    
+    for(i=0;i<Lig;i++){
+        T[i]=(int *) malloc(Col*sizeof(int));
+    }
+    // The array is created, so we create a sub-array for each lines with the size of the columns * the size of an ìnteger (as the columns are also integers)
+    
+    for(i=0;i<Lig;i++){
+        for(j=0;j<Col;j++){
+            T[i][j]=i*Col+j;
+        }
+    }
+    // This function fills each line with the columns but using the form of Arary[1D][2D] -> counter i * column number + j
+    // Example : 0*25+0 / 0*25+1 / 0*25+2 ... | NEW LINE | ... / 1*25+2 / ... | NEW LINE| ... / 2*25+6 ... etc.
+    
+    for(i=0;i<Lig;i++) {
+        for(j=0;j<Col;j++){
+            printf("%d ",T[i][j]);
+        }
+        printf("\n");
+    }
+    // Same operation but this time it prints the output as always
+    
+    for(i=0;i<Lig;i++) free(T[i]);{
+        free(T);
+    }
+    return;
+    
+}
+
+void C3(){
+    int x=5, y=2, z=3;
+    int *ptr1 = NULL, *ptr2 = NULL;
+    int **ptr3 = NULL;
+    *ptr1 = 23;
+    ptr1 = &x;
+    *ptr3 = ptr2;
+    ptr3 = &ptr1;
+    ptr2 = &y;
+    z = *ptr1*(*ptr2)++***ptr3;
+    printf("%d %d %d %d %p %d %p %d\n", x,y,z,*ptr1,ptr1,*ptr2,ptr2,**ptr3);
+    return;
 }
 
 void C2(){
@@ -80,7 +155,7 @@ void C1(){
 
 int main(int argc, const char * argv[]) {
     int choice = 0;
-    printf("Main menu:\n 1 - TD1\n 2 - Course 1\n> ");
+    printf("Main menu:\n 1 - TD1\n 2 - Course 1\n 3 - Course 2\n 4 - Course 3\n 5 - Course 4\n> ");
     scanf("%d", &choice);
     switch (choice) {
         case 0:
@@ -94,6 +169,12 @@ int main(int argc, const char * argv[]) {
             break;
         case 3:
             C2();
+            break;
+        case 4:
+            C3();
+            break;
+        case 5:
+            C4();
             break;
             
         default:
