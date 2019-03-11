@@ -81,3 +81,38 @@ begin
 Array[length] <- null
 length <- length - 1
 end
+
+
+
+
+function dissplayeven(val[], next[]: arrays of integers, bv: integer)
+changed parameters: val, next, bv
+local variable: i: integer
+
+begin
+i <- bv
+while (i != 0)
+    if (i % 2 = 1 AND val[i] % 2 = 0) then
+        write(val[i])
+    end if
+    i <- next[i]
+end while
+end
+
+
+function remove(array[], position, length)
+////
+
+begin
+
+while position < length
+    array[position] = array[postion + 1]
+    position+1
+end while
+array[length] = NULL
+end
+
+
+
+
+

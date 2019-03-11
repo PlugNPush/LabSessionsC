@@ -9,6 +9,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <time.h>
 
 void TD1(){
     char str[20], rev[20];
@@ -162,10 +163,57 @@ void C1(){
     return;
 }
 
+void LS1(){
+    return;
+}
+
+void LS2(){
+    //printf("Menu for LS2:\n 1 - TD1\n 2 - Course 1\n 3 - Course 2\n 4 - Course 3\n 5 - Course 4\n 6 - LabSession 1\n ");
+    
+    int i;
+    for (i=0; i<5; i++) {
+        printf("#");
+    }
+    for (i=0; i<2; i++) {
+        printf("\n#");
+    }
+    for (i=0; i<4; i++) {
+        printf("#");
+    }
+    for (i=0; i<3; i++) {
+        printf("\n#");
+    }
+    
+    printf("\n");
+    
+    srand(time(NULL));
+    
+    int number = rand() % 10000;
+    printf("%d", number);
+    int found = 0;
+    while (found != 1){
+        int guess;
+        printf("\nGuess the number: ");
+        scanf("%d", &guess);
+        if (guess > number){
+            printf("The guess is too high");
+        }
+        if (guess < number){
+            printf("The guess is too low");
+        }
+        if (guess == number){
+            printf("You guessed it!");
+            found = 1;
+        }
+    }
+    
+    return;
+}
+
 
 int main(int argc, const char * argv[]) {
     int choice = 0;
-    printf("Main menu:\n 1 - TD1\n 2 - Course 1\n 3 - Course 2\n 4 - Course 3\n 5 - Course 4\n> ");
+    printf("Main menu:\n 1 - TD1\n 2 - Course 1\n 3 - Course 2\n 4 - Course 3\n 5 - Course 4\n 6 - LabSession 1\n 7 - LabSession 2\n> ");
     scanf("%d", &choice);
     switch (choice) {
         case 0:
@@ -185,6 +233,12 @@ int main(int argc, const char * argv[]) {
             break;
         case 5:
             C4();
+            break;
+        case 6:
+            LS1();
+            break;
+        case 7:
+            LS2();
             break;
             
         default:
