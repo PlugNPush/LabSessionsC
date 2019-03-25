@@ -186,7 +186,7 @@ void LS2(){
     
     printf("\n");
     
-    srand(time(NULL));
+    srand((unsigned int)time(NULL));
     
     int number = rand() % 10000;
     printf("%d", number);
