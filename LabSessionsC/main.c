@@ -210,6 +210,29 @@ void LS2(){
     return;
 }
 
+// Course 5 - Declare a 2 dimentional Array dynamically
+
+int** createtwodim(int L, int C){
+    int** A;
+    int i;
+    A = (int**)malloc(C*sizeof(int*));
+    for (i = 0; i < L; i++){
+        A[i] = (int*)malloc(C*sizeof(int));
+    }
+    return A;
+}
+
+void freqtwodim(int** A, int L){
+    int i;
+    for (i = 0; i < L; i++){
+        free(A[i]);
+    }
+    free(A);
+}
+
+// End of declaratoin and free
+
+
 
 int main(int argc, const char * argv[]) {
     int choice = 0;

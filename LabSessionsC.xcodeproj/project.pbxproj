@@ -23,9 +23,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		ED1770A52248B6F800DC8A45 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text; name = Base; path = Base.lproj/main.alg; sourceTree = "<group>"; };
 		ED1D35EC21FEE6B400A8487A /* LabSessionsC */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = LabSessionsC; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED1D35EF21FEE6B400A8487A /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
-		EDE8913C220362BD002BBE82 /* main.alg */ = {isa = PBXFileReference; lastKnownFileType = text; path = main.alg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,7 +59,7 @@
 			isa = PBXGroup;
 			children = (
 				ED1D35EF21FEE6B400A8487A /* main.c */,
-				EDE8913C220362BD002BBE82 /* main.alg */,
+				ED1770A62248B6F800DC8A45 /* main.alg */,
 			);
 			path = LabSessionsC;
 			sourceTree = "<group>";
@@ -126,6 +126,17 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		ED1770A62248B6F800DC8A45 /* main.alg */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ED1770A52248B6F800DC8A45 /* Base */,
+			);
+			name = main.alg;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		ED1D35F121FEE6B400A8487A /* Debug */ = {

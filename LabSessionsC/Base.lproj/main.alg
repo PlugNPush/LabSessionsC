@@ -210,3 +210,61 @@ end
 
 
 
+CE correction
+cf1: Write a function that performs the swap between two values located in two positions of an array of integers. The array, its length and the subscripts of the two values to be swaped are given as parameters of the function.
+
+function swap(a[]: array of integers, l, pos1, pos2: integers): boolean
+changed parameters: a
+copied parameters: l, pos1, pos2
+local variable: temp: integer
+
+begin
+
+if (pos1 <= 0 or pos1 > l or pos2 <= 0 or pos2 > l) then
+    return false
+end if
+temp <- a[pos1]
+a[pos1] <- a[pos2]
+a[pos2] <- temp
+return true
+end
+
+
+write a function that returns the position of the minimum value in an array of integers
+
+function(a[]: array of integers, l: integer): integer
+changed parameters: /
+copied parameters: a, l
+local variable: posmin, i: integer
+
+begin
+if (l = 0) then
+    return -1
+end if
+posmin <- 1
+for i <- 2 to l do
+    if (a[i] < a[posmin]) then
+        posmin <- i
+    end if
+end for
+return posmin
+end
+
+Using the two previous functions, write a function that sorts an array of integers (selection sorting algotythm). If the array contains n values, this function consists, at each iteration number i, in swaping (if necessary) the element at position i and the minimum of the array delimited by the subscript i and the subscript n. Such an array is denoted by T+i-1.
+
+function selectSort(a[]: array if integers, l: integer)
+changed parameters: a
+copied parameters: l
+local variables: posmin, i: integer
+
+begin
+for i <- 1 to l-1 do
+    posmin <- posMin(a+i-1, l-i+1)
+    if (posmin != i) then
+        swap(a, i, posmin, l-i+1)
+    end if
+end for
+end
+
+
+
