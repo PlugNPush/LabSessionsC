@@ -234,7 +234,7 @@ void freqtwodim(int** A, int L){
 
 
 
-int main(int argc, const char * argv[]) {
+int mainSTOP(int argc, const char * argv[]) {
     int choice = 0;
     printf("Main menu:\n 1 - TD1\n 2 - Course 1\n 3 - Course 2\n 4 - Course 3\n 5 - Course 4\n 6 - LabSession 1\n 7 - LabSession 2\n> ");
     scanf("%d", &choice);
