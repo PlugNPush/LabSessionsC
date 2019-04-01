@@ -291,3 +291,44 @@ begin
     lname[30]: array of characters
     bdate: Date
 end
+
+function setDate(a: Date)
+changed parameters: a
+begin
+    write("Enter the year\n")
+    read(a.year)
+    write("Enter the month\n")
+    read(a.month)
+    write("Enter the day\n")
+    read(a.day)
+end
+
+function writeDate(a: Date)
+copied parameters : a
+begin
+    write("The date is the ", a.day, "/", a.month, "/", a.year, "\n")
+end
+
+function writeStudent(s: Student)
+copied parameters: s
+begin
+    write("The birthday of", s.fname, " ", s.lname, " is the ")
+    writeDate(s.bdate)
+end
+
+function readStudent(s: Student)
+changed parameters: s
+begin
+    write("What is your first name ?")
+    read(s.fname)
+    write("What is your last name")
+    read(s.lname)
+    setDate(s.bdate)
+end
+
+
+// // //
+
+Have an array of Students and sort it by their age!
+
+

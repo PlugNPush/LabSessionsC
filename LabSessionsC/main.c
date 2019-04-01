@@ -240,16 +240,56 @@ struct Date{
 typedef struct Date Date;
 
 typedef struct{
-    int age;
-    int distance;
+    Date bdate;
+    char fname[30];
+    char lname[30];
 }Student;
 
-void setDate(Date *d){
-    (*d).day = 7;
-    (*d).mounth = 2;
-    (*d).year = 2000;
-    d -> day = 7;
+void setDate(Date *d, int day, int month, int year){
+    (*d).day = day;
+    (*d).mounth = month;
+    (*d).year = year;
 }
+
+void writeDate(Date date){
+    printf("%d/%d/%d", date.day, date.mounth, date.year);
+}
+
+// Read (save) + Write (display) Date + Student
+
+void writeStudentFile(Student studentFile){
+    printf("\nBirth date : ");
+    writeDate(studentFile.bdate);
+    printf("\nFirst name : %s\n", studentFile.fname);
+    printf("Last name : %s\n", studentFile.lname);
+    
+    return;
+}
+
+void readStudentFile(){
+    Student studentFile;
+    int day, month, year;
+    printf("Hello, please enter your birth year: ");
+    scanf("%d", &year);
+    printf("Please enter your birth month: ");
+    scanf("%d", &month);
+    printf("Please enter your birth day: ");
+    scanf("%d", &day);
+    Date date;
+    setDate(&date, day, month, year);
+    studentFile.bdate = date;
+    printf("Now enter your first name: ");
+    scanf("%s", studentFile.fname);
+    printf("And finally your last name: ");
+    scanf("%s", studentFile.lname);
+    
+    
+    writeStudentFile(studentFile);
+    return;
+}
+
+
+
 
 void delamerde(){
     int a;
@@ -262,9 +302,11 @@ void delamerde(){
 
 int main(int argc, const char * argv[]) {
     int choice = 0;
-    printf("Main menu:\n 1 - TD1\n 2 - Course 1\n 3 - Course 2\n 4 - Course 3\n 5 - Course 4\n 6 - LabSession 1\n 7 - LabSession 2\n> ");
+    //printf("Main menu:\n 1 - TD1\n 2 - Course 1\n 3 - Course 2\n 4 - Course 3\n 5 - Course 4\n 6 - LabSession 1\n 7 - LabSession 2\n> ");
     //scanf("%d", &choice);
     
+    readStudentFile();
+    return 0;
     switch (choice) {
         case 0:
             printf("Something wrong happened.");
