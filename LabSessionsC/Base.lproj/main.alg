@@ -268,3 +268,26 @@ end
 
 
 
+
+structure types
+
+structure Date
+begin
+    mounth: integer
+    day: integer
+    year: integer
+end
+
+structure Article
+begin
+    name[30]: array of characters
+    code: integer
+    price: real
+end
+
+structure Student
+begin
+    fname[30]: array of characters
+    lname[30]: array of characters
+    bdate: Date
+end

@@ -61,7 +61,7 @@ void showArray(int array[], int max){
 }
 
 // Question 4
-int main(int argc, const char * argv[]) {
+int mainSTOP(int argc, const char * argv[]) {
     
     // Manual fillment of the array
     int array[5];

@@ -232,12 +232,39 @@ void freqtwodim(int** A, int L){
 
 // End of declaratoin and free
 
+struct Date{
+    int mounth;
+    int day;
+    int year;
+};
+typedef struct Date Date;
 
+typedef struct{
+    int age;
+    int distance;
+}Student;
 
-int mainSTOP(int argc, const char * argv[]) {
+void setDate(Date *d){
+    (*d).day = 7;
+    (*d).mounth = 2;
+    (*d).year = 2000;
+    d -> day = 7;
+}
+
+void delamerde(){
+    int a;
+    char b;
+    printf("Enter val: ");
+    scanf("%c%d", &b, &a);
+    printf("%c %d\n", b, a);
+    
+}
+
+int main(int argc, const char * argv[]) {
     int choice = 0;
     printf("Main menu:\n 1 - TD1\n 2 - Course 1\n 3 - Course 2\n 4 - Course 3\n 5 - Course 4\n 6 - LabSession 1\n 7 - LabSession 2\n> ");
-    scanf("%d", &choice);
+    //scanf("%d", &choice);
+    
     switch (choice) {
         case 0:
             printf("Something wrong happened.");
