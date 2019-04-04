@@ -11,6 +11,8 @@
 #include <string.h>
 #include <time.h>
 
+
+
 void TD1(){
     char str[20], rev[20];
     int i;
@@ -243,7 +245,11 @@ typedef struct{
     Date bdate;
     char fname[30];
     char lname[30];
+    long studNumber;
 }Student;
+
+Student studentArray[150];
+int studentNumber;
 
 void setDate(Date *d, int day, int month, int year){
     (*d).day = day;
@@ -287,6 +293,106 @@ void readStudentFile(){
     writeStudentFile(studentFile);
     return;
 }
+
+void readStudentDate(Student *student){
+    printf("Enter your birth date MM/DD/YYYY:\n");
+    scanf("%d/%d/%d", &student->bdate.mounth, &student->bdate.day, &student->bdate.year);
+}
+
+void dispStudentDate(Student student){
+    printf("%d/%d/%d", student.bdate.mounth, student.bdate.day, student.bdate.year);
+    return;
+}
+
+int compareDate(Date date, Date date2){
+    
+    // Comparer l'année
+    if (date.year > date2.year){
+        return 1;
+    } else if (date.year < date2.year){
+        return -1;
+    }
+    
+    // Année identique
+    else {
+        // Comparer le mois
+        if (date.mounth > date2.mounth){
+            return 1;
+        } else if (date.mounth < date2.mounth) {
+            return -1;
+        }
+        
+        // Mois identique
+        else {
+            // comparer le jour
+            if (date.day > date2.day){
+                return 1;
+            } else if (date.day < date2.day){
+                return -1;
+            }
+            
+            // Jour identique, date identique
+            else {
+                return 0;
+            }
+        }
+    }
+}
+
+void setStudentAttributes(Student *student){
+    printf("Please enter your first name: ");
+    scanf("%s", student->fname);
+    printf("Please enter your last name: ");
+    scanf("%s", student->lname);
+    printf("Please enter your student number: ");
+    scanf("%li", &student->studNumber);
+    readStudentDate(student);
+    return;
+}
+
+void fillTheStudentsArray(){
+    int s;
+    printf("How many students do you want to add? ");
+    scanf("%d", &studentNumber);
+    
+    for (s = 0; s < studentNumber; s++){
+        printf("Student %d:\n", s);
+        setStudentAttributes(&studentArray[s]);
+    }
+}
+
+void showArrayStudents(){
+    int s;
+    for (s = 0; s < studentNumber; s++){
+        printf("%s %s\n", studentArray[s].fname, studentArray[s].lname);
+    }
+}
+
+void locateStudentByName(char firstname[30], char lastname[30]){
+    int s;
+    for (s = 0; s < studentNumber; s++){
+        if (studentArray[s].fname == firstname && studentArray[s].lname == lastname){
+            printf("First name: %s\nLast name: %s\nStudent number: %li\n, Birth date: ", studentArray[s].fname, studentArray[s].lname, studentArray[s].studNumber);
+            dispStudentDate(studentArray[s]);
+            return;
+        }
+    }
+    return;
+}
+
+Date sortStudentArrayAge(){
+    Date min = studentArray[0].bdate;
+    int i;
+    for (i = 0; i < studentNumber; i++) {
+        if (compareDate(min, studentArray[i].bdate) == 1){
+            min = studentArray[i].bdate;
+        }
+    }
+    
+    return min;
+}
+
+
 
 
 
