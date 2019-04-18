@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		ED1D35F021FEE6B400A8487A /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = ED1D35EF21FEE6B400A8487A /* main.c */; };
 		ED39C9AA224D19F30023452E /* ExamS2.c in Sources */ = {isa = PBXBuildFile; fileRef = ED39C9A9224D19F30023452E /* ExamS2.c */; };
+		EDEC0C612268C80800FABDC0 /* StackArray.c in Sources */ = {isa = PBXBuildFile; fileRef = EDEC0C602268C80800FABDC0 /* StackArray.c */; };
+		EDEC0C642268C84900FABDC0 /* QueueArray.c in Sources */ = {isa = PBXBuildFile; fileRef = EDEC0C632268C84900FABDC0 /* QueueArray.c */; };
+		EDEC0C672268C8C900FABDC0 /* StackLL.c in Sources */ = {isa = PBXBuildFile; fileRef = EDEC0C662268C8C900FABDC0 /* StackLL.c */; };
+		EDEC0C6A2268C8F000FABDC0 /* QueueLL.c in Sources */ = {isa = PBXBuildFile; fileRef = EDEC0C692268C8F000FABDC0 /* QueueLL.c */; };
+		EDFA699F225B44F50002D8B0 /* algread.c in Sources */ = {isa = PBXBuildFile; fileRef = EDFA699E225B44F50002D8B0 /* algread.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,6 +33,16 @@
 		ED1D35EC21FEE6B400A8487A /* LabSessionsC */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = LabSessionsC; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED1D35EF21FEE6B400A8487A /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		ED39C9A9224D19F30023452E /* ExamS2.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = ExamS2.c; sourceTree = "<group>"; };
+		EDEC0C5F2268C80800FABDC0 /* StackArray.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StackArray.h; sourceTree = "<group>"; };
+		EDEC0C602268C80800FABDC0 /* StackArray.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = StackArray.c; sourceTree = "<group>"; };
+		EDEC0C622268C84900FABDC0 /* QueueArray.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QueueArray.h; sourceTree = "<group>"; };
+		EDEC0C632268C84900FABDC0 /* QueueArray.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = QueueArray.c; sourceTree = "<group>"; };
+		EDEC0C652268C8C900FABDC0 /* StackLL.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StackLL.h; sourceTree = "<group>"; };
+		EDEC0C662268C8C900FABDC0 /* StackLL.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = StackLL.c; sourceTree = "<group>"; };
+		EDEC0C682268C8F000FABDC0 /* QueueLL.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QueueLL.h; sourceTree = "<group>"; };
+		EDEC0C692268C8F000FABDC0 /* QueueLL.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = QueueLL.c; sourceTree = "<group>"; };
+		EDFA699E225B44F50002D8B0 /* algread.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = algread.c; sourceTree = "<group>"; };
+		EDFA69A0225B4A200002D8B0 /* test.alg */ = {isa = PBXFileReference; lastKnownFileType = text; path = test.alg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,7 +77,17 @@
 			children = (
 				ED1D35EF21FEE6B400A8487A /* main.c */,
 				ED1770A62248B6F800DC8A45 /* main.alg */,
+				EDFA69A0225B4A200002D8B0 /* test.alg */,
 				ED39C9A9224D19F30023452E /* ExamS2.c */,
+				EDFA699E225B44F50002D8B0 /* algread.c */,
+				EDEC0C5F2268C80800FABDC0 /* StackArray.h */,
+				EDEC0C602268C80800FABDC0 /* StackArray.c */,
+				EDEC0C622268C84900FABDC0 /* QueueArray.h */,
+				EDEC0C632268C84900FABDC0 /* QueueArray.c */,
+				EDEC0C652268C8C900FABDC0 /* StackLL.h */,
+				EDEC0C662268C8C900FABDC0 /* StackLL.c */,
+				EDEC0C682268C8F000FABDC0 /* QueueLL.h */,
+				EDEC0C692268C8F000FABDC0 /* QueueLL.c */,
 			);
 			path = LabSessionsC;
 			sourceTree = "<group>";
@@ -124,8 +149,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EDEC0C642268C84900FABDC0 /* QueueArray.c in Sources */,
+				EDEC0C6A2268C8F000FABDC0 /* QueueLL.c in Sources */,
 				ED1D35F021FEE6B400A8487A /* main.c in Sources */,
+				EDEC0C672268C8C900FABDC0 /* StackLL.c in Sources */,
 				ED39C9AA224D19F30023452E /* ExamS2.c in Sources */,
+				EDEC0C612268C80800FABDC0 /* StackArray.c in Sources */,
+				EDFA699F225B44F50002D8B0 /* algread.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

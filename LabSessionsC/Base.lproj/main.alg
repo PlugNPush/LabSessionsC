@@ -329,6 +329,41 @@ end
 
 // // //
 
-Have an array of Students and sort it by their age!
+structure: Node
+begin
+    val: Integer
+    next: reference to Node
+end
+
+/// LET LIST BE OF TYPE NODE ///
+
+function destroy(List: list)
+changed parameters: list
+local variable: next, current: references to Nodes
+
+begin
+    current <- list
+    next <- current.next
+    do
+        free(current)
+        current <- next
+        next <- current.next
+    while next != o/empty
+end
+
+algorithm main
+begin
+local variables: SRS: List, XRS,i: Integer
+    XRS <- allocate(Node)
+    write("How many values do you want to add? ")
+    read(XRS)
+    for i <- 0 to i = XRS do
+        addTop(SRS)
+    end for
+
+    showList(SRS)
+
+    destroyList(SRS)
+end
 
 

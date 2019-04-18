@@ -380,22 +380,39 @@ void locateStudentByName(char firstname[30], char lastname[30]){
     return;
 }
 
-Date sortStudentArrayAge(){
-    Date min = studentArray[0].bdate;
+void sortStudentArrayAge(int startPos){
+    int min = startPos;
     int i;
-    for (i = 0; i < studentNumber; i++) {
-        if (compareDate(min, studentArray[i].bdate) == 1){
-            min = studentArray[i].bdate;
+    for (i = startPos + 1; i < studentNumber; i++) {
+        if (compareDate(studentArray[min].bdate, studentArray[i].bdate) == 1){
+            min = i;
         }
     }
+    Student temp;
+    temp = studentArray[min];
+    studentArray[min] = studentArray[0];
+    studentArray[0] = temp;
     
-    return min;
+    
+    return;
 }
 
 
+    // Then, we just have to do a for function using a different sortPos :
 
-
-
+void showSortedArray(){
+    
+    int s;
+    for (s = 0; s < studentNumber; s++) {
+        sortStudentArrayAge(s);
+    }
+    
+    for (s = 0; s < studentNumber; s++) {
+        printf("%s %s (student %li) is born on ", studentArray[s].fname, studentArray[s].lname, studentArray[s].studNumber);
+        dispStudentDate(studentArray[s]);
+        printf("\n");
+    }
+}
 
 void delamerde(){
     int a;
@@ -406,13 +423,106 @@ void delamerde(){
     
 }
 
+void triangle (int a){
+    int x;
+    for (int i = 1; i <= a; i++ ){
+        x = 0;
+        while (x < i) {
+            printf("*");
+            x ++;
+        }
+        printf("\n");
+    }
+    return;
+}
+
+
+typedef struct node{
+    int val;
+    struct node * next;
+}Node;
+typedef Node * List;
+
+void showNode(List l){
+    Node* nextNode = l;
+    
+    while (nextNode != NULL) {
+        printf("%d\n", nextNode->val);
+        nextNode = nextNode->next;
+    }
+}
+
+void destroyNode(Node* node){
+    Node *next;
+    next = node->next;
+    
+    if (node == NULL){
+        return;
+    }
+    
+    while (node->next != NULL) {
+        free(node);
+        node = next;
+        next = next->next;
+    }
+    
+    free(node);
+    node = NULL;
+    printf("OK.");
+}
+
+void addTop(List* l, Node* new){
+    new->next = *l;
+    *l = new;
+}
+
+void addQue(List l, Node* new){
+    Node* vax = NULL;
+    while (l->next != NULL) {
+        vax = l->next;
+    }
+    vax->next = (Node *)malloc(sizeof(Node));
+    vax->next = new;
+}
+
 int main(int argc, const char * argv[]) {
+    
+    int XRS, i;
+    List SRS = NULL;
+    Node* next;
+    printf("How many values do you want to add? ");
+    scanf("%d", &XRS);
+    
+    
+    for (i=0; i < XRS; i++) {
+        next = (Node *)malloc(sizeof(Node));
+        printf("Enter value: ");
+        scanf("%d", &next->val);
+        addTop(&SRS, next);
+    }
+    
+    showNode(SRS);
+    
+    destroyNode(SRS);
+    
+    return 0;
+    
+    triangle(5);
+    return 0;
+    
     int choice = 0;
     //printf("Main menu:\n 1 - TD1\n 2 - Course 1\n 3 - Course 2\n 4 - Course 3\n 5 - Course 4\n 6 - LabSession 1\n 7 - LabSession 2\n> ");
     //scanf("%d", &choice);
     
-    readStudentFile();
+    
+    
+    
+    fillTheStudentsArray();
+    showSortedArray();
+    
     return 0;
+    
+    
     switch (choice) {
         case 0:
             printf("Something wrong happened.");
