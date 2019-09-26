@@ -485,7 +485,7 @@ void addQue(List l, Node* new){
     vax->next = new;
 }
 
-int main(int argc, const char * argv[]) {
+int main2(int argc, const char * argv[]) {
     
     int XRS, i;
     List SRS = NULL;
