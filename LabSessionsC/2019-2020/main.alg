@@ -1,0 +1,23 @@
+fonction nom_fonction(param1: type_param1, param2: type_param2, ..., paramn: type_paramn):type de retour (ou rien)
+
+(paramètres / données) copiées : .....
+(paramètres / données) modifiées : ....
+Variables locales : ....
+
+Début
+
+    .....
+    .....
+    .....
+    .....
+
+Fin
+
+
+
+fonction moyenne3(a, b, c: entiers):entier
+Données copiées : a, b, c
+
+Début
+    retourner (a+b+c)/3
+Fin

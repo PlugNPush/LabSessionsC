@@ -505,10 +505,7 @@ int main2(int argc, const char * argv[]) {
     
     destroyNode(SRS);
     
-    return 0;
-    
     triangle(5);
-    return 0;
     
     int choice = 0;
     //printf("Main menu:\n 1 - TD1\n 2 - Course 1\n 3 - Course 2\n 4 - Course 3\n 5 - Course 4\n 6 - LabSession 1\n 7 - LabSession 2\n> ");
@@ -519,8 +516,6 @@ int main2(int argc, const char * argv[]) {
     
     fillTheStudentsArray();
     showSortedArray();
-    
-    return 0;
     
     
     switch (choice) {
@@ -553,6 +548,7 @@ int main2(int argc, const char * argv[]) {
             printf("Something wrong happened.");
             break;
     }
+    
     return 0;
 }
 

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		ED1D35F021FEE6B400A8487A /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = ED1D35EF21FEE6B400A8487A /* main.c */; };
 		ED39C9AA224D19F30023452E /* ExamS2.c in Sources */ = {isa = PBXBuildFile; fileRef = ED39C9A9224D19F30023452E /* ExamS2.c */; };
+		ED6BF8B623E3484E00AA998E /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = ED6BF8B523E3484E00AA998E /* main.c */; };
 		ED73E929233D110A002E3F9A /* python-session1-converted.c in Sources */ = {isa = PBXBuildFile; fileRef = ED73E928233D110A002E3F9A /* python-session1-converted.c */; };
 		EDEC0C612268C80800FABDC0 /* StackArray.c in Sources */ = {isa = PBXBuildFile; fileRef = EDEC0C602268C80800FABDC0 /* StackArray.c */; };
 		EDEC0C642268C84900FABDC0 /* QueueArray.c in Sources */ = {isa = PBXBuildFile; fileRef = EDEC0C632268C84900FABDC0 /* QueueArray.c */; };
@@ -34,6 +35,9 @@
 		ED1D35EC21FEE6B400A8487A /* LabSessionsC */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = LabSessionsC; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED1D35EF21FEE6B400A8487A /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		ED39C9A9224D19F30023452E /* ExamS2.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = ExamS2.c; sourceTree = "<group>"; };
+		ED6BF8B423E3484E00AA998E /* main.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = main.h; sourceTree = "<group>"; };
+		ED6BF8B523E3484E00AA998E /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		ED6BF8B723E354C800AA998E /* main.alg */ = {isa = PBXFileReference; lastKnownFileType = text; path = main.alg; sourceTree = "<group>"; };
 		ED73E927233D110A002E3F9A /* python-session1-converted.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "python-session1-converted.h"; sourceTree = "<group>"; };
 		ED73E928233D110A002E3F9A /* python-session1-converted.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "python-session1-converted.c"; sourceTree = "<group>"; };
 		EDEC0C5F2268C80800FABDC0 /* StackArray.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StackArray.h; sourceTree = "<group>"; };
@@ -78,6 +82,15 @@
 		ED1D35EE21FEE6B400A8487A /* LabSessionsC */ = {
 			isa = PBXGroup;
 			children = (
+				ED6BF8B223E3480E00AA998E /* 2018-2019 */,
+				ED6BF8B323E3482F00AA998E /* 2019-2020 */,
+			);
+			path = LabSessionsC;
+			sourceTree = "<group>";
+		};
+		ED6BF8B223E3480E00AA998E /* 2018-2019 */ = {
+			isa = PBXGroup;
+			children = (
 				ED1D35EF21FEE6B400A8487A /* main.c */,
 				ED73E928233D110A002E3F9A /* python-session1-converted.c */,
 				ED73E927233D110A002E3F9A /* python-session1-converted.h */,
@@ -94,7 +107,17 @@
 				EDEC0C682268C8F000FABDC0 /* QueueLL.h */,
 				EDEC0C692268C8F000FABDC0 /* QueueLL.c */,
 			);
-			path = LabSessionsC;
+			path = "2018-2019";
+			sourceTree = "<group>";
+		};
+		ED6BF8B323E3482F00AA998E /* 2019-2020 */ = {
+			isa = PBXGroup;
+			children = (
+				ED6BF8B423E3484E00AA998E /* main.h */,
+				ED6BF8B523E3484E00AA998E /* main.c */,
+				ED6BF8B723E354C800AA998E /* main.alg */,
+			);
+			path = "2019-2020";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -159,6 +182,7 @@
 				ED1D35F021FEE6B400A8487A /* main.c in Sources */,
 				EDEC0C672268C8C900FABDC0 /* StackLL.c in Sources */,
 				ED39C9AA224D19F30023452E /* ExamS2.c in Sources */,
+				ED6BF8B623E3484E00AA998E /* main.c in Sources */,
 				EDEC0C612268C80800FABDC0 /* StackArray.c in Sources */,
 				EDFA699F225B44F50002D8B0 /* algread.c in Sources */,
 				ED73E929233D110A002E3F9A /* python-session1-converted.c in Sources */,
