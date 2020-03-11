@@ -8,7 +8,44 @@
 
 #include "main.h"
 
+void echange(int *a, int *b);
+void action(void);
+
+void echange(int *a, int *b) {
+    int save;
+    save = *a;
+    *a = *b;
+    *b = save;
+}
+
+void action() {
+    int x = 5, y = 10;
+    printf("Avant échange, x = %d et y = %d\n", x, y);
+    echange(&x, &y);
+    printf("Après échange, x = %d et y = %d\n", x, y);
+}
+
+int somme(int count, ...){
+    va_list list;
+    int j = 0;
+    int sum = 0;
+
+    va_start(list, count);
+    for(j=0; j<count; j++) {
+        sum += va_arg(list, int);
+    }
+
+    va_end(list);
+
+    return sum;
+    }
+
+
+
 int main(int argc, const char * argv[]) {
+    
+    action();
+    printf("\nSomme de 2, 6, 7, 23, 64, 13, 543, 23 = %d\n\n", somme(8, 2, 6, 7, 23, 64, 13, 543, 23));
     
     int choice = 90;
     
