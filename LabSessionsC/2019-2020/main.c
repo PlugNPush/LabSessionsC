@@ -51,7 +51,7 @@ int main(int argc, const char * argv[]) {
     
     while (choice != 0) {
         
-        printf("Welcome. Chose one option to start.\n1 - Remplir un tableau\n2 - Minimum\n3 - Moyenne\n4 - Recherche\n5 - Ajouter\n6 - Fusion\n0 - Exit\n");
+        printf("Welcome. Chose one option to start.\n1 - Remplir un tableau\n2 - Minimum\n3 - Moyenne\n4 - Recherche\n5 - Ajouter\n6 - Fusion\n7 - Pointeurs\n8 - Copy str\n9 - MAJ\n10 - Palindrome\n11 - Nombre de mots0 - Exit\n");
         
         scanf("%d", &choice);
         printf("\n");
@@ -197,6 +197,70 @@ int main(int argc, const char * argv[]) {
             
             int tab[5];
             tab[0] = 10;
+        }
+        else if (choice == 8) {
+            char a[100] = "WOOOOOOOOOOOOOOOOOOW";
+            char b[100];
+            int i;
+            
+            for (i=0; i<100; i++) {
+                b[i] = a[i];
+            }
+            printf("%s\n", b);
+        }
+        else if (choice == 9) {
+            char a[100] = "woR4DC:=;EZsnbhjbsFn RDsbdyeiuksFRSn bfjke()!!!:/,slfb SDFGdbhur32";
+            char b[100];
+            int i;
+                       
+            for (i=0; i<100; i++) {
+                if (a[i] >= 'a' && a[i] <= 'z') {
+                    b[i] = a[i] - ' ';
+                } else {
+                    b[i] = a[i];
+                }
+                
+            }
+            printf("%s\n", b);
+        }
+        else if (choice == 10) {
+            char a[100] = "lolu";
+            int i = 0, pos = 0, found = 0, pal = 1, j = 0;
+            
+            while (found == 0) {
+                if (a[i] == '\0') {
+                    pos = i;
+                    found = 1;
+                }
+                i++;
+            }
+            
+            for (i=pos-1; i > 0; i--) {
+                if (a[j++] != a[i]) {
+                    pal = 0;
+                }
+            }
+            
+            if (pal == 1) {
+                printf("%s est un palindrome.\n", a);
+            } else {
+                printf("%s n'est pas un palindrome.\n", a);
+            }
+            
+        }
+        else if (choice == 11) {
+            char a[100] = "lolu";
+            int i = 0, pos = 0, found = 0;
+            
+            while (found == 0) {
+                if (a[i] == '\0') {
+                    pos = i;
+                    found = 1;
+                }
+                i++;
+            }
+            
+            // COMPTER LE NBR DE MOTS
         }
         
         
