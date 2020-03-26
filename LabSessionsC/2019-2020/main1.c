@@ -17,7 +17,7 @@ int main1(int argc, const char * argv[]) {
     int i;
     i = 10;
     
-    if (i == 20 || 30) {
+    if (i == 20 || i== 30) {
         printf("True\n");
     } else {
         printf("False");

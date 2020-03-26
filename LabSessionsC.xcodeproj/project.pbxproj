@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		ED126C0C23F5B9AE00B6B944 /* main2.c in Sources */ = {isa = PBXBuildFile; fileRef = ED126C0B23F5B9AE00B6B944 /* main2.c */; };
 		ED1D35F021FEE6B400A8487A /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = ED1D35EF21FEE6B400A8487A /* main.c */; };
-		ED26CD2E24114ED10077EAF0 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = ED26CD2D24114ED10077EAF0 /* main.c */; };
+		ED26CD2E24114ED10077EAF0 /* main4.c in Sources */ = {isa = PBXBuildFile; fileRef = ED26CD2D24114ED10077EAF0 /* main4.c */; };
 		ED39C9AA224D19F30023452E /* ExamS2.c in Sources */ = {isa = PBXBuildFile; fileRef = ED39C9A9224D19F30023452E /* ExamS2.c */; };
 		ED5BF52424081940003C9785 /* main_td1.c in Sources */ = {isa = PBXBuildFile; fileRef = ED5BF52324081940003C9785 /* main_td1.c */; };
 		ED6BF8B623E3484E00AA998E /* main1.c in Sources */ = {isa = PBXBuildFile; fileRef = ED6BF8B523E3484E00AA998E /* main1.c */; };
@@ -18,6 +18,8 @@
 		EDEC0C642268C84900FABDC0 /* QueueArray.c in Sources */ = {isa = PBXBuildFile; fileRef = EDEC0C632268C84900FABDC0 /* QueueArray.c */; };
 		EDEC0C672268C8C900FABDC0 /* StackLL.c in Sources */ = {isa = PBXBuildFile; fileRef = EDEC0C662268C8C900FABDC0 /* StackLL.c */; };
 		EDEC0C6A2268C8F000FABDC0 /* QueueLL.c in Sources */ = {isa = PBXBuildFile; fileRef = EDEC0C692268C8F000FABDC0 /* QueueLL.c */; };
+		EDF78A64241F7C7300250BC7 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = EDF78A63241F7C7300250BC7 /* main.c */; };
+		EDF78A66241F7CF100250BC7 /* fonctions.c in Sources */ = {isa = PBXBuildFile; fileRef = EDF78A65241F7CF100250BC7 /* fonctions.c */; };
 		EDFA699F225B44F50002D8B0 /* algread.c in Sources */ = {isa = PBXBuildFile; fileRef = EDFA699E225B44F50002D8B0 /* algread.c */; };
 /* End PBXBuildFile section */
 
@@ -39,8 +41,8 @@
 		ED1770A52248B6F800DC8A45 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text; name = Base; path = Base.lproj/main.alg; sourceTree = "<group>"; };
 		ED1D35EC21FEE6B400A8487A /* LabSessionsC */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = LabSessionsC; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED1D35EF21FEE6B400A8487A /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
-		ED26CD2C24114ED10077EAF0 /* main.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = main.h; sourceTree = "<group>"; };
-		ED26CD2D24114ED10077EAF0 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		ED26CD2C24114ED10077EAF0 /* main4.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = main4.h; sourceTree = "<group>"; };
+		ED26CD2D24114ED10077EAF0 /* main4.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main4.c; sourceTree = "<group>"; };
 		ED39C9A9224D19F30023452E /* ExamS2.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = ExamS2.c; sourceTree = "<group>"; };
 		ED5BF52224081940003C9785 /* main_td1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = main_td1.h; sourceTree = "<group>"; };
 		ED5BF52324081940003C9785 /* main_td1.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main_td1.c; sourceTree = "<group>"; };
@@ -57,6 +59,9 @@
 		EDEC0C662268C8C900FABDC0 /* StackLL.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = StackLL.c; sourceTree = "<group>"; };
 		EDEC0C682268C8F000FABDC0 /* QueueLL.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QueueLL.h; sourceTree = "<group>"; };
 		EDEC0C692268C8F000FABDC0 /* QueueLL.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = QueueLL.c; sourceTree = "<group>"; };
+		EDF78A62241F7C7300250BC7 /* main.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = main.h; sourceTree = "<group>"; };
+		EDF78A63241F7C7300250BC7 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		EDF78A65241F7CF100250BC7 /* fonctions.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = fonctions.c; sourceTree = "<group>"; };
 		EDFA699E225B44F50002D8B0 /* algread.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = algread.c; sourceTree = "<group>"; };
 		EDFA69A0225B4A200002D8B0 /* test.alg */ = {isa = PBXFileReference; lastKnownFileType = text; path = test.alg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -129,8 +134,11 @@
 				ED6BF8B723E354C800AA998E /* main.alg */,
 				ED5BF52224081940003C9785 /* main_td1.h */,
 				ED5BF52324081940003C9785 /* main_td1.c */,
-				ED26CD2C24114ED10077EAF0 /* main.h */,
-				ED26CD2D24114ED10077EAF0 /* main.c */,
+				ED26CD2C24114ED10077EAF0 /* main4.h */,
+				ED26CD2D24114ED10077EAF0 /* main4.c */,
+				EDF78A62241F7C7300250BC7 /* main.h */,
+				EDF78A63241F7C7300250BC7 /* main.c */,
+				EDF78A65241F7CF100250BC7 /* fonctions.c */,
 			);
 			path = "2019-2020";
 			sourceTree = "<group>";
@@ -192,15 +200,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EDF78A64241F7C7300250BC7 /* main.c in Sources */,
 				ED126C0C23F5B9AE00B6B944 /* main2.c in Sources */,
 				EDEC0C642268C84900FABDC0 /* QueueArray.c in Sources */,
 				EDEC0C6A2268C8F000FABDC0 /* QueueLL.c in Sources */,
 				ED1D35F021FEE6B400A8487A /* main.c in Sources */,
 				EDEC0C672268C8C900FABDC0 /* StackLL.c in Sources */,
 				ED39C9AA224D19F30023452E /* ExamS2.c in Sources */,
+				EDF78A66241F7CF100250BC7 /* fonctions.c in Sources */,
 				ED6BF8B623E3484E00AA998E /* main1.c in Sources */,
 				EDEC0C612268C80800FABDC0 /* StackArray.c in Sources */,
-				ED26CD2E24114ED10077EAF0 /* main.c in Sources */,
+				ED26CD2E24114ED10077EAF0 /* main4.c in Sources */,
 				ED5BF52424081940003C9785 /* main_td1.c in Sources */,
 				EDFA699F225B44F50002D8B0 /* algread.c in Sources */,
 				ED73E929233D110A002E3F9A /* python-session1-converted.c in Sources */,
