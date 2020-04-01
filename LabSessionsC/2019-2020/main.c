@@ -8,6 +8,142 @@
 
 #include "main.h"
 
+int** init_tab(int L, int C) {
+    int** T = (int**) malloc(L * sizeof(int *));
+    int i;
+    for (i=0; i<L; i++) {
+        T[i] = (int*) malloc(C * sizeof(int));
+    }
+    if (T == NULL) {
+        exit(EXIT_FAILURE);
+    }
+    
+    int j;
+    for (i=0; i<L; i++) {
+        for (j=0; j<C; j++) {
+            T[i][j] = 0;
+        }
+    }
+    
+    return T;
+}
+
+int main(int argc, char * argv[]) {
+    int L = 5, C = 8;
+    int** T = init_tab(L, C);
+    int i, j;
+    for (i=0; i<L; i++) {
+        printf("[ ");
+        for (j=0; j<C; j++) {
+            printf("%d ", T[i][j]);
+        }
+        printf("]\n");
+    }
+    
+    return 0;
+}
+
+
+
+int estOrdonne(int tab[], int taille) {
+    if (taille <= 0) {
+        return -1;
+    }
+    int ord = tab[0];
+    int i;
+    for (i=1; i<taille; i++) {
+        if (tab[i] < ord) {
+            return 0;
+        }
+        ord = tab[i];
+    }
+    return 1;
+    
+}
+
+
+int mainEXO3(int argc, char * argv[]) {
+    int tableauT1[] = {2, 5, 7, 23, 54, 76, 233, 435, 653, 764, 872, 910, 993, 1049};
+    int tailleT1 = 14;
+    int tableauT2[] = {3, 6, 7, 23, 76, 65, 12, 25};
+    int tailleT2 = 8;
+    
+    printf(estOrdonne(tableauT1, tailleT1) == 1 ? "Le tableau T1 est ordonné\n" : "Le tableau T1 n'est pas ordonné\n");
+    printf(estOrdonne(tableauT2, tailleT2) == 1 ? "Le tableau T2 est ordonné\n" : "Le tableau T2 n'est pas ordonné\n");
+    return 0;
+}
+
+
+
+
+int pgcd(int a, int b) {
+    if (a == b) {
+        return a;
+    } else if (a>b) {
+        return pgcd(a-b, b);
+    } else if (a<b) {
+        return pgcd(a, b-a);
+    } else {
+        return -1; // Ce code n'a pas de raison d'être appelé, mais c'est une sécurité supplémentaire.
+    }
+}
+
+int mainEX2(int argc, char * argv[]) {
+    int a = 45, b = 25;
+    printf("Le PGCD de %d et %d est %d.\n", a, b, pgcd(a, b));
+    
+    return 0;
+}
+
+
+
+int mainEX1(int argc, char * argv[]) {
+    int nba;
+    printf("Please enter the first number: ");
+    scanf("%d", &nba);
+    int nbb;
+    printf("Please enter the second number: ");
+    scanf("%d", &nbb);
+    int nbc;
+    printf("Please enter the third number: ");
+    scanf("%d", &nbc);
+    fflush(stdout);
+    int minimum;
+    if (nba < nbb) {
+        minimum = nba;
+        if (nbb > nbc) {
+            if (nbc > nba) {
+                minimum = nba;
+            } else {
+                minimum = nbc;
+            }
+        } else {
+            if (nbb > nba) {
+                minimum = nba;
+            } else {
+                minimum = nbb;
+            }
+        }
+    } else {
+        minimum = nbb;
+        if (nba > nbc) {
+            if (nbb > nbc) {
+                minimum = nbc;
+            } else {
+                minimum = nbb;
+            }
+        } else {
+            if (nba > nbb) {
+                minimum = nbb;
+            } else {
+                minimum = nba;
+            }
+        }
+    }
+    printf("The minimum of these numbers is %d.\n", minimum);
+    return 0;
+}
+
 int* create_array(int size) {
     int* tab = (int*) malloc(size * sizeof(int));
     if (tab == NULL) {
@@ -113,7 +249,7 @@ void puiss(int a, int* p2, int* p3) {
     *p3 = a*a*a;
 }
 
-int main(int argc, const char * argv[]) {
+int main26(int argc, const char * argv[]) {
     
     int a = 3, b = 5;
     int c = 0;
