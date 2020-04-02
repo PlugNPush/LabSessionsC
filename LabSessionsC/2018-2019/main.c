@@ -234,15 +234,15 @@ void freqtwodim(int** A, int L){
 
 // End of declaratoin and free
 
-struct Date{
+struct Dater{
     int mounth;
     int day;
     int year;
 };
-typedef struct Date Date;
+typedef struct Dater Dater;
 
 typedef struct{
-    Date bdate;
+    Dater bdate;
     char fname[30];
     char lname[30];
     long studNumber;
@@ -251,13 +251,13 @@ typedef struct{
 Student studentArray[150];
 int studentNumber;
 
-void setDate(Date *d, int day, int month, int year){
+void setDate_(Dater *d, int day, int month, int year){
     (*d).day = day;
     (*d).mounth = month;
     (*d).year = year;
 }
 
-void writeDate(Date date){
+void writeDate_(Dater date){
     printf("%d/%d/%d", date.day, date.mounth, date.year);
 }
 
@@ -265,7 +265,7 @@ void writeDate(Date date){
 
 void writeStudentFile(Student studentFile){
     printf("\nBirth date : ");
-    writeDate(studentFile.bdate);
+    writeDate_(studentFile.bdate);
     printf("\nFirst name : %s\n", studentFile.fname);
     printf("Last name : %s\n", studentFile.lname);
     
@@ -281,8 +281,8 @@ void readStudentFile(){
     scanf("%d", &month);
     printf("Please enter your birth day: ");
     scanf("%d", &day);
-    Date date;
-    setDate(&date, day, month, year);
+    Dater date;
+    setDate_(&date, day, month, year);
     studentFile.bdate = date;
     printf("Now enter your first name: ");
     scanf("%s", studentFile.fname);
@@ -292,6 +292,11 @@ void readStudentFile(){
     
     writeStudentFile(studentFile);
     return;
+}
+
+void readDate_(Dater *date) {
+    printf("Enter the date MM/DD/YYYY:\n");
+    scanf("%d/%d/%d", &date->mounth, &date->day, &date->year);
 }
 
 void readStudentDate(Student *student){
@@ -304,7 +309,7 @@ void dispStudentDate(Student student){
     return;
 }
 
-int compareDate(Date date, Date date2){
+int compareDate_(Dater date, Dater date2){
     
     // Comparer l'année
     if (date.year > date2.year){
@@ -384,7 +389,7 @@ void sortStudentArrayAge(int startPos){
     int min = startPos;
     int i;
     for (i = startPos + 1; i < studentNumber; i++) {
-        if (compareDate(studentArray[min].bdate, studentArray[i].bdate) == 1){
+        if (compareDate_(studentArray[min].bdate, studentArray[i].bdate) == 1){
             min = i;
         }
     }

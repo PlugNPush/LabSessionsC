@@ -28,7 +28,7 @@ int** init_tab(int L, int C) {
     return T;
 }
 
-int main(int argc, char * argv[]) {
+int mainEXO4(int argc, char * argv[]) {
     int L = 5, C = 8;
     int** T = init_tab(L, C);
     int i, j;
@@ -293,5 +293,85 @@ int main26(int argc, const char * argv[]) {
     free(B);
     
     return 0;
+}
+
+struct Date{
+    int month;
+    int day;
+    int year;
+};
+typedef struct Date Date;
+
+typedef struct{
+    char libelle[30];
+    int code;
+    Date datePeremption;
+    float prix;
+    int qteStock;
+}Article;
+
+
+void setDate(Date *d, int day, int month, int year){
+    (*d).day = day;
+    (*d).month = month;
+    (*d).year = year;
+}
+
+void writeDate(Date date){
+    printf("%d/%d/%d\n", date.day, date.month, date.year);
+}
+
+void readDate(Date *date) {
+    printf("Enter the date MM/DD/YYYY:\n");
+    scanf("%d/%d/%d", &date->month, &date->day, &date->year);
+}
+
+
+int compareDate(Date date, Date date2){
+    
+    // Comparer l'année
+    if (date.year > date2.year){
+        return 1;
+    } else if (date.year < date2.year){
+        return -1;
+    }
+    
+    // Année identique
+    else {
+        // Comparer le mois
+        if (date.month > date2.month){
+            return 1;
+        } else if (date.month < date2.month) {
+            return -1;
+        }
+        
+        // Mois identique
+        else {
+            // comparer le jour
+            if (date.day > date2.day){
+                return 1;
+            } else if (date.day < date2.day){
+                return -1;
+            }
+            
+            // Jour identique, date identique
+            else {
+                return 0;
+            }
+        }
+    }
+}
+
+void readArticle(Article* article) {
+    printf("Saisir l'article comme suit :\nnom code prix quantité : ");
+    scanf("%s %d %f %d", article->libelle, &article->code, &article->prix, &article->qteStock);
+    readDate(&article->datePeremption);
+}
+
+
+int main(int argc, char * argv[]) {
+    Date d;
+    readDate(&d);
+    writeDate(d);
 }
 
