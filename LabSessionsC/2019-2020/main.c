@@ -318,12 +318,13 @@ void setDate(Date *d, int day, int month, int year){
 }
 
 void writeDate(Date date){
-    printf("%d/%d/%d\n", date.day, date.month, date.year);
+    printf("%d/%d/%d", date.day, date.month, date.year);
 }
 
 void readDate(Date *date) {
     printf("Enter the date MM/DD/YYYY:\n");
     scanf("%d/%d/%d", &date->month, &date->day, &date->year);
+    fflush(stdin);
 }
 
 
@@ -365,13 +366,92 @@ int compareDate(Date date, Date date2){
 void readArticle(Article* article) {
     printf("Saisir l'article comme suit :\nnom code prix quantité : ");
     scanf("%s %d %f %d", article->libelle, &article->code, &article->prix, &article->qteStock);
+    fflush(stdin);
     readDate(&article->datePeremption);
+    printf("\n");
 }
 
+typedef struct Magasin {
+    Article* stock;
+    int quantité;
+    float prixStock;
+}Magasin;
+
+void initMagasin(Magasin* mag) {
+    printf("Combien d'articles ? ");
+    int qte;
+    scanf("%d", &qte);
+    mag->stock = (Article*) malloc(sizeof(Article) * qte);
+    if (mag->stock == NULL) {
+        exit(EXIT_FAILURE);
+    }
+    int i;
+    for (i=0; i<qte; i++) {
+        printf("Article %d\n", i+1);
+        readArticle(&mag->stock[i]);
+    }
+    mag->quantité = qte;
+    mag->prixStock = 0;
+    for (i=0; i<qte; i++) {
+        mag->prixStock += mag->stock[i].prix;
+    }
+}
+
+void showArticles(Magasin mag) {
+    int i;
+    for (i=0; i<mag.quantité; i++) {
+        printf("[ %s %d %.2f %d ", mag.stock[i].libelle, mag.stock[i].code, mag.stock[i].prix, mag.stock[i].qteStock);
+        writeDate(mag.stock[i].datePeremption);
+        printf(" ]\n");
+    }
+}
+
+float priceArticles(Magasin mag) {
+    int i;
+    float price = 0;
+    for (i=0; i<mag.quantité; i++) {
+        price += mag.stock[i].prix;
+    }
+    return price;
+}
+
+int expensive(Magasin mag) {
+    int i, priceIndex;
+    Article price = mag.stock[0];
+    priceIndex = 0;
+    for (i=1; i<mag.quantité; i++) {
+        if (price.prix < mag.stock[i].prix) {
+            price = mag.stock[i];
+            priceIndex = i;
+        }
+    }
+    return priceIndex;
+}
+
+void showMagasin(Magasin mag) {
+    printf("Articles du magasin\n    Nom   Code  Prix Qté. Date d'exp.\n");
+    showArticles(mag);
+    printf("Quantité d'articles: %d\n", mag.quantité);
+    printf("Prix total: %.2f", mag.prixStock);
+}
 
 int main(int argc, char * argv[]) {
+    Magasin mag;
+    initMagasin(&mag);
+    showArticles(mag);
+    printf("\n\n");
+    showMagasin(mag);
+    //printf("Le prix total est %.2f\n", priceArticles(mag));
+    printf("\nL'article le plus cher est à la postion %d\n", expensive(mag));
+    
+    return 0;
+}
+
+int main642(int argc, char * argv[]) {
     Date d;
     readDate(&d);
     writeDate(d);
+    
+    return 0;
 }
 

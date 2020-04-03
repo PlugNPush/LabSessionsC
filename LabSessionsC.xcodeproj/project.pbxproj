@@ -14,6 +14,7 @@
 		ED5BF52424081940003C9785 /* main_td1.c in Sources */ = {isa = PBXBuildFile; fileRef = ED5BF52324081940003C9785 /* main_td1.c */; };
 		ED6BF8B623E3484E00AA998E /* main1.c in Sources */ = {isa = PBXBuildFile; fileRef = ED6BF8B523E3484E00AA998E /* main1.c */; };
 		ED73E929233D110A002E3F9A /* python-session1-converted.c in Sources */ = {isa = PBXBuildFile; fileRef = ED73E928233D110A002E3F9A /* python-session1-converted.c */; };
+		EDE3AE62243756B90095F819 /* test.c in Sources */ = {isa = PBXBuildFile; fileRef = EDE3AE61243756B90095F819 /* test.c */; };
 		EDEC0C612268C80800FABDC0 /* StackArray.c in Sources */ = {isa = PBXBuildFile; fileRef = EDEC0C602268C80800FABDC0 /* StackArray.c */; };
 		EDEC0C642268C84900FABDC0 /* QueueArray.c in Sources */ = {isa = PBXBuildFile; fileRef = EDEC0C632268C84900FABDC0 /* QueueArray.c */; };
 		EDEC0C672268C8C900FABDC0 /* StackLL.c in Sources */ = {isa = PBXBuildFile; fileRef = EDEC0C662268C8C900FABDC0 /* StackLL.c */; };
@@ -51,6 +52,8 @@
 		ED6BF8B723E354C800AA998E /* main.alg */ = {isa = PBXFileReference; lastKnownFileType = text; path = main.alg; sourceTree = "<group>"; };
 		ED73E927233D110A002E3F9A /* python-session1-converted.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "python-session1-converted.h"; sourceTree = "<group>"; };
 		ED73E928233D110A002E3F9A /* python-session1-converted.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "python-session1-converted.c"; sourceTree = "<group>"; };
+		EDE3AE60243756B90095F819 /* test.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = test.h; sourceTree = "<group>"; };
+		EDE3AE61243756B90095F819 /* test.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = test.c; sourceTree = "<group>"; };
 		EDEC0C5F2268C80800FABDC0 /* StackArray.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StackArray.h; sourceTree = "<group>"; };
 		EDEC0C602268C80800FABDC0 /* StackArray.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = StackArray.c; sourceTree = "<group>"; };
 		EDEC0C622268C84900FABDC0 /* QueueArray.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QueueArray.h; sourceTree = "<group>"; };
@@ -139,6 +142,8 @@
 				EDF78A62241F7C7300250BC7 /* main.h */,
 				EDF78A63241F7C7300250BC7 /* main.c */,
 				EDF78A65241F7CF100250BC7 /* fonctions.c */,
+				EDE3AE60243756B90095F819 /* test.h */,
+				EDE3AE61243756B90095F819 /* test.c */,
 			);
 			path = "2019-2020";
 			sourceTree = "<group>";
@@ -200,6 +205,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EDE3AE62243756B90095F819 /* test.c in Sources */,
 				EDF78A64241F7C7300250BC7 /* main.c in Sources */,
 				ED126C0C23F5B9AE00B6B944 /* main2.c in Sources */,
 				EDEC0C642268C84900FABDC0 /* QueueArray.c in Sources */,
