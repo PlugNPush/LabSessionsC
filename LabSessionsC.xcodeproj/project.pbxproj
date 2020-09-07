@@ -37,6 +37,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		ED10B27D25067E6300983154 /* td1.alg */ = {isa = PBXFileReference; lastKnownFileType = text; path = td1.alg; sourceTree = "<group>"; };
 		ED126C0A23F5B9AE00B6B944 /* main2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = main2.h; sourceTree = "<group>"; };
 		ED126C0B23F5B9AE00B6B944 /* main2.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main2.c; sourceTree = "<group>"; };
 		ED1770A52248B6F800DC8A45 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text; name = Base; path = Base.lproj/main.alg; sourceTree = "<group>"; };
@@ -80,6 +81,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		ED10B27E25067E8F00983154 /* 2020-2021 */ = {
+			isa = PBXGroup;
+			children = (
+				ED10B27D25067E6300983154 /* td1.alg */,
+			);
+			path = "2020-2021";
+			sourceTree = "<group>";
+		};
 		ED1D35E321FEE6B400A8487A = {
 			isa = PBXGroup;
 			children = (
@@ -101,6 +110,7 @@
 			children = (
 				ED6BF8B223E3480E00AA998E /* 2018-2019 */,
 				ED6BF8B323E3482F00AA998E /* 2019-2020 */,
+				ED10B27E25067E8F00983154 /* 2020-2021 */,
 			);
 			path = LabSessionsC;
 			sourceTree = "<group>";
