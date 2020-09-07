@@ -435,7 +435,7 @@ void showMagasin(Magasin mag) {
     printf("Prix total: %.2f", mag.prixStock);
 }
 
-int main(int argc, char * argv[]) {
+int main545423(int argc, char * argv[]) {
     Magasin mag;
     initMagasin(&mag);
     showArticles(mag);
