@@ -69,6 +69,7 @@
 		EDF78A62241F7C7300250BC7 /* main.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = main.h; sourceTree = "<group>"; };
 		EDF78A63241F7C7300250BC7 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		EDF78A65241F7CF100250BC7 /* fonctions.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = fonctions.c; sourceTree = "<group>"; };
+		EDF7932A25223A930077A2D4 /* td3.alg */ = {isa = PBXFileReference; lastKnownFileType = text; path = td3.alg; sourceTree = "<group>"; };
 		EDFA699E225B44F50002D8B0 /* algread.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = algread.c; sourceTree = "<group>"; };
 		EDFA69A0225B4A200002D8B0 /* test.alg */ = {isa = PBXFileReference; lastKnownFileType = text; path = test.alg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -88,6 +89,7 @@
 			isa = PBXGroup;
 			children = (
 				ED10B27D25067E6300983154 /* td1.alg */,
+				EDF7932A25223A930077A2D4 /* td3.alg */,
 				ED10B27F25068DED00983154 /* main.h */,
 				ED10B28025068DED00983154 /* main.c */,
 			);
