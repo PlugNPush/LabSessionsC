@@ -56,6 +56,7 @@
 		ED6BF8B723E354C800AA998E /* main.alg */ = {isa = PBXFileReference; lastKnownFileType = text; path = main.alg; sourceTree = "<group>"; };
 		ED73E927233D110A002E3F9A /* python-session1-converted.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "python-session1-converted.h"; sourceTree = "<group>"; };
 		ED73E928233D110A002E3F9A /* python-session1-converted.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "python-session1-converted.c"; sourceTree = "<group>"; };
+		EDE33F1725248C7600CADA7F /* NASS BELLIK GRANDJEAN MARGUET.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "NASS BELLIK GRANDJEAN MARGUET.txt"; sourceTree = "<group>"; };
 		EDE3AE60243756B90095F819 /* test.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = test.h; sourceTree = "<group>"; };
 		EDE3AE61243756B90095F819 /* test.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = test.c; sourceTree = "<group>"; };
 		EDEC0C5F2268C80800FABDC0 /* StackArray.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StackArray.h; sourceTree = "<group>"; };
@@ -69,7 +70,6 @@
 		EDF78A62241F7C7300250BC7 /* main.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = main.h; sourceTree = "<group>"; };
 		EDF78A63241F7C7300250BC7 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		EDF78A65241F7CF100250BC7 /* fonctions.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = fonctions.c; sourceTree = "<group>"; };
-		EDF7932A25223A930077A2D4 /* td3.alg */ = {isa = PBXFileReference; lastKnownFileType = text; path = td3.alg; sourceTree = "<group>"; };
 		EDFA699E225B44F50002D8B0 /* algread.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = algread.c; sourceTree = "<group>"; };
 		EDFA69A0225B4A200002D8B0 /* test.alg */ = {isa = PBXFileReference; lastKnownFileType = text; path = test.alg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -89,9 +89,9 @@
 			isa = PBXGroup;
 			children = (
 				ED10B27D25067E6300983154 /* td1.alg */,
-				EDF7932A25223A930077A2D4 /* td3.alg */,
 				ED10B27F25068DED00983154 /* main.h */,
 				ED10B28025068DED00983154 /* main.c */,
+				EDE33F1725248C7600CADA7F /* NASS BELLIK GRANDJEAN MARGUET.txt */,
 			);
 			path = "2020-2021";
 			sourceTree = "<group>";

@@ -1,0 +1,101 @@
+Type Structure ​Tâche
+​| nom​, mot, ​nom de la Tâche
+| status​, mot, ​le statut de la Tâche
+| jours​, entier positif, ​le nombre de jours nécessaires pour finir la Tâche
+FinType
+
+Type Structure Liste
+​| info, Tâche
+| suiv, Adresse de Liste
+FinType
+
+Fonction decompte(l: Liste, s: mot, c:Int): Int
+Paramètre copié: l, s, c
+Début
+    Si l != null:
+        Si l->info->status = s:
+            decompte(l->suiv, s, c+1)
+        Sinon:
+            decompte(l->suiv, s, c)
+        Fin Si
+    Sinon:
+        Retourner c
+    Fin Si
+Fin
+
+Fonction changeState(l: Liste, copy: Liste, s: mot, from: mot, dec: Int)
+Paramètre modifié: l
+Paramètre copié: s, from, dec
+Début
+    Si l != null:
+        Si decompte(copy, s, 0) < dec:
+            Si l->info->status = from:
+                l->info->status <- s
+            Fin Si
+            changeState(l->suiv, copy, s, from, dec)
+        Fin Si
+    Fin Si
+Fin
+
+Fonction exo1_Tâche (t: Tâche, l: Liste)
+Paramètre modifié: l
+Paramètre copié: t
+Variable locale: temp, l2: Liste
+Début
+    Si l = null:
+        Allocation l
+        l->info <- t
+    Sinon
+        temp <- l
+        Tant que temp->suiv != NULL:
+            temp <- temp->suiv
+        Fin tant que
+        Allocation l2
+        l2->info <- t
+        temp->suiv <- l2
+    Fin Si
+Fin
+
+Fonction exo2_fin_Tâche(l: Liste): Liste
+Paramètre copié: l
+Début
+    Si l != null:
+        Si l->suiv != null:
+            // Cas général
+            Si l->suiv->info->jours <= 0:
+                l->suiv <- l->suiv->suiv
+                Liberer l->suiv
+            Fin Si
+            l->suiv <- exo2_fin_Tâche(l->suiv)
+        Sinon
+            // Dernier élément
+            Si l->info->jours <= 0:
+                Liberer l
+                Retourner null
+            Fin Si
+        Fin Si
+    Fin Si
+    Retourner l
+Fin
+
+Fonction exo3_decrement(l:Liste)
+Paramètre modifié: l
+Début
+    Si l != null:
+        Si l->info->status = En_cours:
+            l->info->jours <- l->info->jours - 1
+        Fin Si
+        Si l->info->jours <= 0:
+            l->info->status <- Terminée
+        Fin Si
+        exo3_decrement(l->suiv)
+    Fin Si
+Fin
+
+Fonction exo4_enCours(l: Liste)
+Paramètre modifié: l
+Début
+    Si l != null:
+        changeState(l, l, En_cours, En_attente, 5)
+    Fin Si
+Fin
