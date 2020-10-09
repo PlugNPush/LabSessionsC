@@ -49,6 +49,7 @@
 		ED26CD2C24114ED10077EAF0 /* main4.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = main4.h; sourceTree = "<group>"; };
 		ED26CD2D24114ED10077EAF0 /* main4.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main4.c; sourceTree = "<group>"; };
 		ED39C9A9224D19F30023452E /* ExamS2.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = ExamS2.c; sourceTree = "<group>"; };
+		ED3A282A252DD8550036C321 /* td2.alg */ = {isa = PBXFileReference; lastKnownFileType = text; path = td2.alg; sourceTree = "<group>"; };
 		ED5BF52224081940003C9785 /* main_td1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = main_td1.h; sourceTree = "<group>"; };
 		ED5BF52324081940003C9785 /* main_td1.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main_td1.c; sourceTree = "<group>"; };
 		ED6BF8B423E3484E00AA998E /* main1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = main1.h; sourceTree = "<group>"; };
@@ -89,6 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				ED10B27D25067E6300983154 /* td1.alg */,
+				ED3A282A252DD8550036C321 /* td2.alg */,
 				ED10B27F25068DED00983154 /* main.h */,
 				ED10B28025068DED00983154 /* main.c */,
 				EDE33F1725248C7600CADA7F /* NASS BELLIK GRANDJEAN MARGUET.txt */,
@@ -191,7 +193,7 @@
 		ED1D35E421FEE6B400A8487A /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 1100;
+				LastUpgradeCheck = 1200;
 				ORGANIZATIONNAME = "Groupe MINASTE";
 				TargetAttributes = {
 					ED1D35EB21FEE6B400A8487A = {
@@ -281,6 +283,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -340,6 +343,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;

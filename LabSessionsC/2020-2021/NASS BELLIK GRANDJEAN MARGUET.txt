@@ -99,3 +99,42 @@ Début
         changeState(l, l, En_cours, En_attente, 5)
     Fin Si
 Fin
+
+
+----
+
+2.1)    Algo : creer_arbre (n : entier) : Noeud
+Variable : i, entier, compteur
+        A, Nœud
+        Nouv, Noeud
+Début
+    Si n=0 alors
+        Retourner NULL
+    Sinon
+        Nœud A
+        Tant que (i=1; i <= n/2 ; i++) faire
+            Nœud nouv
+            nouv->sad <- NULL
+            nouv->sag <- NULL
+            Si i%2=0 alors
+                A->sag <- nouv
+            Sinon
+                A->sad <- nouv
+                A <- A->sag
+            Fin Si
+        Fin Tant que
+        Tant que (i=n/2; i < n ; i++) faire
+            Nœud nouv
+            nouv->sad <- NULL
+            nouv->sag <- NULL
+            Si i%2=0 alors
+                A->sag <- nouv
+            Sinon si i%2=1 ET i<=n/2
+                A->sad <- nouv
+                A <- A->sag
+            Fin Si
+        Fin Tant que
+    Retourner A
+    Fin Si
+Fin
+
